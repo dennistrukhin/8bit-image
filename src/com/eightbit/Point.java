@@ -6,22 +6,46 @@ public class Point {
     private int green;
     private int blue;
 
-    public Point(int r, int g, int b) {
+    Point(int r, int g, int b) {
         red = r;
         green = g;
         blue = b;
     }
 
-    public int getRed() {
+    int getRed() {
         return red;
     }
 
-    public int getGreen() {
+    int getGreen() {
         return green;
     }
 
-    public int getBlue() {
+    int getBlue() {
         return blue;
+    }
+
+    void setRed(int red) {
+        this.red = red;
+    }
+
+    void setGreen(int green) {
+        this.green = green;
+    }
+
+    void setBlue(int blue) {
+        this.blue = blue;
+    }
+
+    void add(Point p) {
+        red += p.getRed();
+        green += p.getGreen();
+        blue += p.getBlue();
+    }
+
+    void divideBy(int n) {
+        red = Math.round((float)red / n);
+        green = Math.round((float)green / n);
+        blue = Math.round((float)blue / n);
     }
 
     @Override
